@@ -1,0 +1,14 @@
+{
+  "name": "lux-data-structure",
+  "version": "1.0.1",
+  "description": "拓展js数据结构,陆续更新中",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "data-structure"
+  ],
+  "author": "olianna.luxine@foxmail.com",
+  "license": "ISC"
+}
