@@ -11,5 +11,7 @@
     "data-structure"
   ],
   "author": "olianna.luxine@foxmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+  }
 }
