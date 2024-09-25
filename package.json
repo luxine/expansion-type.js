@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "jest",
-    "publish": "npm version patch && npm publish"
+    "updatenpm": "npm version patch && npm publish"
   },
   "keywords": [
     "data-structure"
