@@ -1,10 +1,11 @@
 {
   "name": "lux-data-structure",
-  "version": "1.0.1",
-  "description": "拓展js数据结构,陆续更新中",
+  "version": "1.0.2",
+  "description": "拓展js数据结构",
   "main": "index.ts",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "publish": "npm version patch && npm publish"
   },
   "keywords": [
     "data-structure"
