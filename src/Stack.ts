@@ -8,7 +8,7 @@ export class Stack<T> {
         this.wkm = new WeakMap();
         this.count = 0;
     }
-
+    
     /**
      * Adds an element to the stack.
      * @param element - The element to add to the stack.

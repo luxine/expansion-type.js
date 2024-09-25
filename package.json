@@ -4,7 +4,7 @@
   "description": "拓展js数据结构",
   "main": "index.ts",
   "scripts": {
-    "test": "test",
+    "test": "jest",
     "publish": "npm version patch && npm publish"
   },
   "keywords": [
@@ -12,6 +12,12 @@
   ],
   "author": "olianna.luxine@foxmail.com",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
   }
 }
