@@ -8,7 +8,8 @@
     "updatenpm": "npm version patch && npm publish"
   },
   "keywords": [
-    "data-structure"
+    "data-structure",
+    "expansion-type"
   ],
   "author": "olianna.luxine@foxmail.com",
   "license": "ISC",
