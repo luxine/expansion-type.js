@@ -1,6 +1,6 @@
 {
   "name": "lux-data-structure",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "拓展js数据结构",
   "main": "index.ts",
   "scripts": {
