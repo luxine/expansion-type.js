@@ -1,6 +1,6 @@
 {
   "name": "expansion-type.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "拓展js数据结构",
   "main": "index.ts",
   "type": "module",
