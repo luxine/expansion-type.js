@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "拓展js数据结构",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
-    "test": "jest",
-    "updatenpm": "npm version patch && npm publish"
+    "jest": "jest",
+    "test": "npx tsx ./test/index.test.ts",
+    "upnpm": "npm version patch && npm publish"
   },
   "keywords": [
     "data-structure",
@@ -19,6 +21,7 @@
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
     "typescript": "^5.6.2"
   }
 }

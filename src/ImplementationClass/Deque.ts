@@ -1,6 +1,4 @@
 import { Queue } from "./Queue";
-
-
 export class Deque extends Queue<any> {
     constructor() {
         super();

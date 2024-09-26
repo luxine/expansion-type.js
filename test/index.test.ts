@@ -1,6 +1,7 @@
-import { Queue } from "../src/Queue";
-import { Stack } from "../src/Stack";
-import  { Deque } from "../src/Deque";
-test('Queue is initially empty', () => {
+import { Queue } from "../src/ImplementationClass/Queue";
+import { Stack } from "../src/ImplementationClass/Stack";
+import  { Deque } from "../src/ImplementationClass/Deque";
 
-});
+
+
+
