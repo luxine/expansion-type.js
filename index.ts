@@ -1,3 +1,4 @@
 import { Stack } from "./src/Stack";
+import { Queue } from "./src/Queue";
 
-export { Stack };
+export { Stack,Queue };
