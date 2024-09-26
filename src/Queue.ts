@@ -5,7 +5,7 @@ export class Queue<T> {
     /**
      * 使用 WeakMap 存储队列元素，键为队列实例，值为数组
      */
-    private wkm: WeakMap<Queue<T>, Array<T>>;
+    protected wkm: WeakMap<Queue<T>, Array<T>>;
 
     /**
      * 构造函数初始化 WeakMap，并设置当前实例的键值为一个空数组
@@ -81,6 +81,9 @@ export class Queue<T> {
      * @returns 队列的所有元素
      */
     print(): T[]{
+        if(this.isEmpty()){
+            return [];
+        }
         let _wkm = this.wkm.get(this) as Array<T>;
         
         return _wkm;
