@@ -1,48 +1,27 @@
-import { Queue } from "./Queue";
-export class Deque extends Queue<any> {
+import { AbstractDeque } from "../AbstractClass/AbstractDeque";
+export class Deque<T> extends AbstractDeque<T> {
     constructor() {
         super();
     }
-    dequeue(){
-        throw  new Error("This method is disabled,Please use removeFront() instead.");
-    }
-    enqueue(){
-        throw  new Error("This method is disabled,Please use addBack() instead.");
-    }
-    peek() {
-        throw new Error("This method is disabled,Please use peekFront() / peekBack() instead.");
-    }
 
-    addFront(element: any) {
-        let _wkm = this.wkm.get(this) as Array<any>;
+    addFront(element: T): void {
+        let _wkm = this.wkm.get(this) as Array<T>;
         _wkm.unshift(element);
     }
 
-    addBack(element: any) {
-        return super.enqueue(element);
-    }
-
-    removeFront() {
-        return super.dequeue();
-    }
-
-    removeBack(): void {
-        if (super.isEmpty()) {
-            return;
-        }
-        let _wkm = this.wkm.get(this) as Array<any>;
-        _wkm.pop();
-    }
-    peekFront() {
-        return super.peek();
-    }
-    peekBack(){
-        if (super.isEmpty()) {
+    removeBack(): T | undefined {
+        if (this.isEmpty()) {
             return undefined;
         }
-        let _wkm = this.wkm.get(this) as Array<any>;
+        let _wkm = this.wkm.get(this) as Array<T>;
+        return _wkm.pop();
+    }
+
+    peekBack(): T | undefined {
+        if (this.isEmpty()) {
+            return undefined;
+        }
+        let _wkm = this.wkm.get(this) as Array<T>;
         return _wkm[_wkm.length - 1];
     }
 }
-
-
