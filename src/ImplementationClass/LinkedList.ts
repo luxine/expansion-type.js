@@ -76,6 +76,11 @@ export class LinkedListNode<T>{
     size(): number{
         return this.count;
     }
+
+    remove(element: T): T | undefined{
+        const index = this.indexOf(element);
+        return this.removeAt(index);
+    }
     insert(element: T, index: number): boolean{
         if(index <0 || index > this.count){
             return false;

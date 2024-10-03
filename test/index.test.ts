@@ -21,4 +21,6 @@ console.log(link.print());
 console.log(link.insert(6, 1));
 console.log(link.print());
 console.log(link.indexOf(1));
+console.log(link.remove(true));
+console.log(link.print());
 
