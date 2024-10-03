@@ -42,6 +42,7 @@ export class LinkedListNode<T>{
         return current;
     }
     
+    
     removeAt(index: number): T | undefined{
         if(index<0 || index>this.count){
             return undefined;
@@ -58,7 +59,7 @@ export class LinkedListNode<T>{
         let current :NodeType<T> |null |undefined;
         
         previous = this.getElementAt(index-1) as NodeType<T> | null | undefined
-        current = this.getElementAt(index) as NodeType<T> | null | undefined
+        current = previous?.next as NodeType<T> | null | undefined
         
         if(current == null){
             return undefined;
@@ -72,8 +73,32 @@ export class LinkedListNode<T>{
         return current?.value;
     }
     
-    insert(element: T, index: number){
+    size(): number{
+        return this.count;
+    }
+    insert(element: T, index: number): boolean{
+        if(index <0 || index > this.count){
+            return false;
+        }
         
+        if(index == 0){
+            const node = new Node(element);
+            node.next = this.head;
+            this.head = node;
+            this.count++;
+            return true;
+        }
+        
+        const node = new Node(element);
+        
+        const previous = this.getElementAt(index-1)
+        if(previous == null){
+            return false;
+        }
+        node.next = previous?.next
+        previous.next = node
+        this.count++
+        return true
     }
     print(): Array<T>{
         let list: Array<T> = []
@@ -83,5 +108,24 @@ export class LinkedListNode<T>{
             current = current?.next
         }
         return list
+    }
+
+    indexOf(element: T): number{
+        let current = this.head
+        for(let i = 0; i < this.count; i++){
+            if(this.equalsFn(element, current?.value as T)){
+                return i
+            }
+            current = current?.next
+        }
+        return -1
+    }
+    
+    isEmpty(): boolean{
+        return this.size() === 0
+    }
+
+    getHead(): NodeType<T> | null | undefined{
+        return this.head 
     }
 }
