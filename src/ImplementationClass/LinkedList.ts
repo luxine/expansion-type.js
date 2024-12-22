@@ -133,4 +133,9 @@ export class LinkedListNode<T>{
     getHead(): NodeType<T> | null | undefined{
         return this.head 
     }
+
+    clear(): void {
+        this.head = null;
+        this.count = 0;
+    }
 }
