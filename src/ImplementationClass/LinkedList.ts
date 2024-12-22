@@ -1,7 +1,7 @@
 import { Node } from "../models/linked-list-models";
 import { defaultEquals } from "../util/default";
 
-interface NodeType<T>{
+export interface NodeType<T>{
     value: T;
     next: NodeType<T> | null | undefined;
 }
