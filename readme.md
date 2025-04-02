@@ -14,6 +14,19 @@
 
 ****
 
+#### 安装
+
+**NPM**
+```
+NPM install expansion-type.js
+```
+
+**yarn**
+```
+yarn add expansion-type.js
+```
+****
+
 #### 简介
 
 **本包的源码实现均采用`接口（Interface）-->抽象类（AbstractClass）-->实现类（ImplementationClass）`设计，源码请查看`src`目录下文件**
